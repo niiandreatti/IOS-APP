@@ -52,11 +52,14 @@ class FeedController: UIViewController {
         childrenview.layer.cornerRadius = 7
         return childrenview
     }()
-    private lazy var conteiner: UIButton = {
-        let text1 = UIButton()
+    private lazy var conteiner: UITextField = {
+        let text1 = UITextField()
         text1.translatesAutoresizingMaskIntoConstraints = false
-        text1.setTitle("acesso ao app", for: .normal)
-        text1.tintColor = .orange
+        text1.textColor = .orange
+        text1.text = "Acesso ao app"
+        text1.font = UIFont.systemFont(ofSize: 13)
+        text1.tintColor = UIColor(red: 181/255, green: 141/255 , blue: 72/255,alpha: 1.0
+        )
         return text1
     }()
     private lazy var acess: UITextField = {
@@ -127,10 +130,11 @@ class FeedController: UIViewController {
             sonview.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             sonview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -90),
             sonview.widthAnchor.constraint(equalToConstant:  UIScreen.main.bounds.width - 20),
-            sonview.heightAnchor.constraint(equalToConstant: 150),
+            sonview.heightAnchor.constraint(equalToConstant: 170),
         ]
         let conteiner = [
-            acess.widthAnchor.constraint(equalToConstant: 10)
+            conteiner.leftAnchor.constraint(equalTo: self.sonview.leftAnchor,constant: 23),
+            conteiner.centerYAnchor.constraint(equalTo: self.sonview.centerYAnchor, constant: -60),
         ]
         let acess = [
             acess.leftAnchor.constraint(equalTo: self.sonview.leftAnchor,constant: 23),
