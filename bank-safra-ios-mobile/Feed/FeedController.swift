@@ -45,6 +45,39 @@ class FeedController: UIViewController {
         iv.image = UIImage(named: "arrow-feed")
         return iv
     }()
+    private lazy var sonview: UIView = {
+        let childrenview = UIView()
+        childrenview.translatesAutoresizingMaskIntoConstraints = false
+        childrenview.backgroundColor = .white
+        childrenview.layer.cornerRadius = 7
+        return childrenview
+    }()
+    private lazy var conteiner: UIButton = {
+        let text1 = UIButton()
+        text1.translatesAutoresizingMaskIntoConstraints = false
+        text1.setTitle("acesso ao app", for: .normal)
+        text1.tintColor = .orange
+        return text1
+    }()
+    private lazy var acess: UITextField = {
+        let text2 = UITextField()
+        text2.translatesAutoresizingMaskIntoConstraints = false
+        text2.text = "Já sou cliente"
+        text2.font = UIFont.systemFont(ofSize: 25)
+        text2.textColor = .black
+        return text2
+    }()
+    private lazy var login: UIButton = {
+       let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = UIColor(red: 23/255, green: 27/255, blue: 58/255, alpha: 1.0)
+        button.tintColor = .white
+        button.layer.cornerRadius = 7
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 17)
+        button.setTitle("Login", for: .normal)
+        
+        return button
+    }()
     
     // MARK: add subviews
     
@@ -53,6 +86,10 @@ class FeedController: UIViewController {
         view.addSubview(textbutton)
         textbutton.addSubview(homeiv)
         textbutton.addSubview(arrowiv)
+        view.addSubview(sonview)
+        sonview.addSubview(conteiner)
+        sonview.addSubview(acess)
+        sonview.addSubview(login)
         
         setupUI()
     }
@@ -64,7 +101,7 @@ class FeedController: UIViewController {
             image.widthAnchor.constraint(equalToConstant: 130),
             image.heightAnchor.constraint(equalToConstant: 180),
             image.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            image.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -120),
+            image.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100),
         ]
         
         let button = [
@@ -86,9 +123,30 @@ class FeedController: UIViewController {
             arrowiv.centerYAnchor.constraint(equalTo: textbutton.centerYAnchor),
             arrowiv.rightAnchor.constraint(equalTo: textbutton.safeAreaLayoutGuide.rightAnchor, constant: -10),
         ]
+        let sonview  = [
+            sonview.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            sonview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -90),
+            sonview.widthAnchor.constraint(equalToConstant:  UIScreen.main.bounds.width - 20),
+            sonview.heightAnchor.constraint(equalToConstant: 150),
+        ]
+        let conteiner = [
+            acess.widthAnchor.constraint(equalToConstant: 10)
+        ]
+        let acess = [
+            acess.leftAnchor.constraint(equalTo: self.sonview.leftAnchor,constant: 23),
+            acess.centerYAnchor.constraint(equalTo: self.sonview.centerYAnchor, constant: -35),
+        ]
+        let login = [
+            login.widthAnchor.constraint(equalToConstant: 320),
+            login.heightAnchor.constraint(equalToConstant: 40),
+            login.centerYAnchor.constraint(equalTo: self.sonview.centerYAnchor,constant: 30),
+            login.leftAnchor.constraint(equalTo: self.sonview.leftAnchor,constant: 23)
+        ]
         
         
-        NSLayoutConstraint.activate(imageLogo + button + homeiv + arrowiv)
+        
+        
+        NSLayoutConstraint.activate(imageLogo + button + homeiv + arrowiv + sonview + conteiner + acess + login)
     }
     
 }
