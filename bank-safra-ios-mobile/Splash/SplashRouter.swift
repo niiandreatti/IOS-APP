@@ -22,4 +22,5 @@ final class SplashViewControllerRouter: RouterProtocol {
         navigation.modalTransitionStyle = .crossDissolve
         self.viewController?.present(navigation, animated: true)
     }
+    
 }

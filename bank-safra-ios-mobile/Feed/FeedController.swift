@@ -78,10 +78,11 @@ class FeedController: UIViewController {
         button.layer.cornerRadius = 7
         button.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         button.setTitle("Login", for: .normal)
+        button.addTarget(self, action: #selector(Login), for: .touchUpInside)
         
         return button
     }()
-    
+   
     // MARK: add subviews
     
     func setupLayout() {
@@ -151,6 +152,10 @@ class FeedController: UIViewController {
         
         
         NSLayoutConstraint.activate(imageLogo + button + homeiv + arrowiv + sonview + conteiner + acess + login)
+    }
+    //MARK: objc
+    @objc func Login(){
+        navigationController?.pushViewController(HomeController(), animated: true)
     }
     
 }

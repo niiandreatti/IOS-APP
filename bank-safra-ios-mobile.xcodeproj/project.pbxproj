@@ -15,6 +15,7 @@
 		9AABDA9229E0662C0006A9D4 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABDA9129E0662C0006A9D4 /* SplashRouter.swift */; };
 		9AABDA9429E07AE60006A9D4 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABDA9329E07AE60006A9D4 /* FeedController.swift */; };
 		9AABDA9629E07DD60006A9D4 /* SetupAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABDA9529E07DD60006A9D4 /* SetupAppBar.swift */; };
+		9AABDA9929E4DE5D0006A9D4 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABDA9829E4DE5D0006A9D4 /* HomeController.swift */; };
 		9AF8689B29E05DF8000153A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8689A29E05DF8000153A9 /* AppDelegate.swift */; };
 		9AF8689D29E05DF8000153A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8689C29E05DF8000153A9 /* SceneDelegate.swift */; };
 		9AF8689F29E05DF8000153A9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8689E29E05DF8000153A9 /* SplashViewController.swift */; };
@@ -30,6 +31,7 @@
 		9AABDA9129E0662C0006A9D4 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		9AABDA9329E07AE60006A9D4 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		9AABDA9529E07DD60006A9D4 /* SetupAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAppBar.swift; sourceTree = "<group>"; };
+		9AABDA9829E4DE5D0006A9D4 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		9AF8689729E05DF8000153A9 /* Safra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Safra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF8689A29E05DF8000153A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF8689C29E05DF8000153A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				9AABDA9329E07AE60006A9D4 /* FeedController.swift */,
+				9AABDA9829E4DE5D0006A9D4 /* HomeController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				9AABDA8629E0601F0006A9D4 /* ColorsApp.swift in Sources */,
 				9AABDA9429E07AE60006A9D4 /* FeedController.swift in Sources */,
 				9AF8689B29E05DF8000153A9 /* AppDelegate.swift in Sources */,
+				9AABDA9929E4DE5D0006A9D4 /* HomeController.swift in Sources */,
 				9AF8689D29E05DF8000153A9 /* SceneDelegate.swift in Sources */,
 				9AABDA9229E0662C0006A9D4 /* SplashRouter.swift in Sources */,
 				9AABDA9029E064DC0006A9D4 /* ViewControllerProtocolsVip.swift in Sources */,
