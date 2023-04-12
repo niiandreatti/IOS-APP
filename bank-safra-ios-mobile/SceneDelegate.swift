@@ -16,7 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
                 
-        let vc = HomeController() //SplashVCFactory.config()  //HomeController()
+        let vc = SplashVCFactory.config()
+        
         let navigation = UINavigationController(rootViewController: vc)
         let window = UIWindow(windowScene: windowScene)
         
